@@ -1,5 +1,7 @@
-var elixir = require('laravel-elixir');
 
+var gulp = require('gulp');
+
+var sass = require('gulp-ruby-sass');
 /*
  |--------------------------------------------------------------------------
  | Elixir Asset Management
@@ -11,6 +13,13 @@ var elixir = require('laravel-elixir');
  |
  */
 
-elixir(function(mix) {
-    mix.sass('app.scss');
+
+gulp.task('default', function() {
+ console.log('def');
+});
+
+gulp.task('sass', function () {
+ return sass('public/scss/style.scss')
+     .on('error', sass.logError)
+     .pipe(gulp.dest('public/css'));
 });
