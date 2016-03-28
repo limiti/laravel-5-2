@@ -24,3 +24,16 @@ Route::group(['middleware' => 'web'], function () {
 
     Route::get('/home', 'HomeController@index');
 });
+
+
+
+
+    Route::get('cards','CardsController@index');
+    Route::get('cards/{card}','CardsController@show');
+
+
+    Route::post('cards/{card}/notes','NotesController@store');
+
+
+
+

@@ -6,6 +6,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
+
     <div class="layout-app">
         <header>
             <div class="layout-container">
@@ -46,8 +47,11 @@
                    </section>
                    <section class="main-user-section left">
                     <div class="layout-wrapper">
-                        <div>
+                        <div class="avatar-img">
                             <img src="http://www.nouspace.net/john/commons/images/avatar.gif" alt=""/>
+                            <div class="avatar-img-hover">
+                                <span>Upload</span>
+                            </div>
                         </div>
                         <hr/>
                         <div>
@@ -103,6 +107,24 @@
 
 
 <style>
+
+
+    .avatar-img{
+        position: relative;
+    }
+
+    .avatar-img:hover .avatar-img-hover{
+        display: block;
+    }
+
+    .avatar-img-hover{
+        display: none;
+        position: absolute;
+        bottom: 0;
+        text-align: center;
+        width: 100%;
+        background: #d1d1d1;
+    }
 /*
 *App Config
 */
@@ -176,6 +198,7 @@ span{
 
 main  img{
     max-width: 100%;
+    display: block;
 }
 
     body , a , *{
