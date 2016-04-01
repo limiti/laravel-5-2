@@ -34,8 +34,8 @@ class HomeController extends Controller
     public function index(Request $request)
     {
         $name = $request->input('name');
-        var_dump($name);
-        var_dump(Auth::user()->email);
+/*        var_dump($name);
+var_dump(Auth::user()->email);*/
         return view('home');
 
     }

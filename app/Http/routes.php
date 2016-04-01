@@ -34,6 +34,11 @@ Route::group(['middleware' => 'web'], function () {
 
     Route::post('cards/{card}/notes','NotesController@store');
 
+    Route::get('/cards/{card}/edit','CardsController@edit');
+
+
+    Route::post('/cards/{card}/update','CardsController@update');
+
 
 
 
