@@ -24,7 +24,7 @@ class CardsRequests extends Request
     public function rules()
     {
         return [
-            'title' => 'max:10'
+            'title' => 'required|min:1|max:10'
         ];
     }
 }

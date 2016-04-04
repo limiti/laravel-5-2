@@ -31,12 +31,12 @@ class HomeController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function index(Request $request)
+    public function index()
     {
-        $name = $request->input('name');
-/*        var_dump($name);
-var_dump(Auth::user()->email);*/
+       // $name = $request->input('name');
         return view('home');
+
+/*      var_dump(Auth::user()->email);*/
 
     }
 }

@@ -1,4 +1,5 @@
 <!-- Latest compiled and minified CSS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 <div class="container">
 <h1>One Card</h1>
@@ -67,3 +68,41 @@
 ?>
 
 </div>
+<div id="js_inner">
+    <h1>JS</h1>
+    <table></table>
+</div>
+
+
+<script>
+
+
+
+
+$.ajax({
+    url: 'http://laravel-5-2.loc/cards',
+    success: function(responce){
+
+        $.each(responce,function(iterator,element){
+
+
+            $('#js_inner').append('<ul><div  class="a'+iterator+'" ><h1>'+ element.title +'</h1></div></ul>');
+
+            inner(element.notes,iterator);
+
+           // console.log(responce);
+
+        });
+
+    }
+});
+
+
+    function inner(elems , iterator){
+
+        $.each(elems,function(i,e){
+            $('.a'+iterator).append('<li class="b" style="  background: #09F9C2;">'+ e.body + ':card_id - '+ e.id +'</li>');
+        });
+
+    }
+</script>

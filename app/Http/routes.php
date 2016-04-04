@@ -23,10 +23,6 @@ Route::group(['middleware' => 'web'], function () {
     Route::auth();
 
     Route::get('/home', 'HomeController@index');
-});
-
-
-
 
     Route::get('cards','CardsController@index');
     Route::get('cards/{card}','CardsController@show');
@@ -38,6 +34,18 @@ Route::group(['middleware' => 'web'], function () {
 
 
     Route::post('/cards/{card}/update','CardsController@update');
+
+
+    Route::get('/todo','TodosController@index');
+    Route::post('/todo/create','TodosController@create');
+
+    Route::get('/todo/{id}','TodosController@show');
+
+    Route::get('todo/{id}/edit','TodosController@edit');
+    Route::post('todo/{id}/edit/update', 'TodosController@update');
+
+});
+
 
 
 

@@ -11,7 +11,7 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-    public  function in(){
-        var_dump('true_in');
+    public function index(){
+
     }
 }
